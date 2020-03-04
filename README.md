@@ -9,3 +9,7 @@ Por exemplo, para resolver o desafio **O Primeiro do Ranking**:
 * Rode os testes unitários do arquivo ***tests/test_o_primeiro_do_ranking.py*** e faça com que eles passem;
 
 Pronto!
+
+Execute os testes por meio do comando:
+
+`$ python3 -m unittest tests/test_o_primeiro_do_ranking.py`

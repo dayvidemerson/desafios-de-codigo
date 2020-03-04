@@ -159,6 +159,17 @@ Exemplo de saída 2
 
 """
 
+from bisect import bisect
 
 def o_primeiro_do_ranking(qtd_pontuacoes, pontuacoes, qtd_pontuacoes_do_joaozinho, pontuacoes_do_joaozinho):
-    pass
+    pontuacoes = list(set(pontuacoes))
+    pontuacoes.sort()
+    qtd_pontuacoes = len(pontuacoes)
+
+    classificacoes = []
+
+    for x in pontuacoes_do_joaozinho:
+        classificacao = (qtd_pontuacoes - bisect(pontuacoes, x)) + 1
+        classificacoes.append(classificacao)
+
+    return classificacoes
